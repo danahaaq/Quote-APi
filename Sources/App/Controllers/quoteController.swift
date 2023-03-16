@@ -3,12 +3,12 @@ import Vapor
 
 struct quoteController: RouteCollection {
     func boot(routes: Vapor.RoutesBuilder) throws {
-        let quote = routes .grouped ("quote")
+        let quote = routes .grouped ("author")
         quote.get (use: index)
     }
     //quote route
-    func index(req: Request) throws -> EventLoopFuture<[Quote]> {
-        return Quote.query(on: req.db).all()
+    func index(req: Request) throws -> EventLoopFuture<[Author]> {
+        return Author.query(on: req.db).all()
     }
 
 //    func create(req: Request) async throws -> Todo {

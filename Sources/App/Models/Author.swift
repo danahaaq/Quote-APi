@@ -3,7 +3,7 @@ import Vapor
 
 // mappping, connection with database
 // It represent our data in the database
-final class Quote: Model, Content {
+final class Author: Model, Content {
     static let schema = "Author"
     
     @ID(key: .id)

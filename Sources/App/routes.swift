@@ -2,8 +2,8 @@ import Fluent
 import Vapor
 
 func routes(_ app: Application) throws {
-    app.post("quote"){ req -> EventLoopFuture<Quote> in
-        let s = try req.content.decode(Quote.self)
+    app.post("author"){ req -> EventLoopFuture<Author> in
+        let s = try req.content.decode(Author.self)
         return s.create(on: req.db).map {s}
     }
     
