@@ -8,7 +8,7 @@ public func configure(_ app: Application) throws {
     // app.middleware.use(FileMiddleware(publicDirectory: app.directory.publicDirectory))
     app.databases.use(.postgres(hostname: "localhost", username: "postgres", password: "" , database: "quote"), as: .psql)
     // table name createSongs()
-    app.migrations.add(CreateQuote())
+    app.migrations.add(CreateAuthor())
     // wait means : wait until line 19 run or loading
     try app.autoMigrate().wait()
     // register routes

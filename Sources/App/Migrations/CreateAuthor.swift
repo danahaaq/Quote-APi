@@ -1,6 +1,6 @@
 import Fluent
 
-struct CreateQuote:Migration{
+struct CreateAuthor:Migration{
     
     // these are the changes we want to make
     func prepare(on database: FluentKit.Database) -> NIOCore.EventLoopFuture<Void> {
