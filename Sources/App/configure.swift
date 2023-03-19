@@ -9,7 +9,8 @@ public func configure(_ app: Application) throws {
     app.databases.use(.postgres(hostname: "localhost", username: "postgres", password: "" , database: "qt"), as: .psql)
     // table name createSongs()
     app.migrations.add(CreateAuthor())
-    app.migrations.add(CreateQuote())
+    app.migrations.add(createQuotee())
+    app.migrations.add(createQuotee())
     
     // wait means : wait until line 19 run or loading
     try app.autoMigrate().wait()

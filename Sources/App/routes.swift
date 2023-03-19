@@ -13,5 +13,5 @@ func routes(_ app: Application) throws {
         return qt.create(on: req.db).map {qt}
     }
     
-    try app.register(collection: quoteController())
+    try app.register(collection: quoteControllerr())
 }
