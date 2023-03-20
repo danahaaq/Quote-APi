@@ -11,7 +11,7 @@ import FluentPostgresDriver
 
 struct createQuoteeee2:Migration{
     
-    // these are the changes we want to make
+    // These are the changes we want to make
     func prepare(on database: Database) -> EventLoopFuture<Void> {
         // we have table called songs
         // this songs have two culomns id and title
