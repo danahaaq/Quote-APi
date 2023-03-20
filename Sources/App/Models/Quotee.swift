@@ -1,10 +1,17 @@
+//
+//  Quotee.swift
+//  
+//
+//  Created by Aldanah Alqbbani on 28/08/1444 AH.
+//
+
 import Fluent
 import Vapor
 
 // mappping, connection with database
 // It represent our data in the database
-final class Quote: Model, Content {
-    static let schema = "quote"
+final class Quotee: Model, Content {
+    static let schema = "Quuote"
     
     @ID(key: .id)
     // optional beacuse its autogenrated on the database

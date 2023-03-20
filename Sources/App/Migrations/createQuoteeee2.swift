@@ -1,32 +1,30 @@
 //
-//  File.swift
+//  createQuoteeee2.swift
 //  
 //
-//  Created by Aldanah Alqbbani on 24/08/1444 AH.
+//  Created by Aldanah Alqbbani on 28/08/1444 AH.
 //
 
 import Foundation
 import Fluent
 import FluentPostgresDriver
 
-struct createQuotee:Migration{
+struct createQuoteeee2:Migration{
     
     // these are the changes we want to make
     func prepare(on database: Database) -> EventLoopFuture<Void> {
         // we have table called songs
         // this songs have two culomns id and title
-        database.schema("quote")
+        database.schema("Quuote")
             .id()
             .field("Quotes", .string, .required)
             .field("Source", .string, .required)
-            .field("author_id", .uuid, .required, .references("Author", "id"))
+            .field("author_id", .uuid, .required, .references("Author", "id",onDelete: .cascade))
             .create()
     }
     // these if we want to revert those changes
     func revert(on database: Database) -> EventLoopFuture<Void> {
-         database.schema("quote").delete()
+         database.schema("Quuote").delete()
     }
         
 }
-
-

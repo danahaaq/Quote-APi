@@ -8,8 +8,8 @@ func routes(_ app: Application) throws {
     }
     try app.register(collection: authorController())
     
-    app.post("Quote"){ req -> EventLoopFuture<Quote> in
-        let qt = try req.content.decode(Quote.self)
+    app.post("Quote"){ req -> EventLoopFuture<Quotee> in
+        let qt = try req.content.decode(Quotee.self)
         return qt.create(on: req.db).map {qt}
     }
     

@@ -11,6 +11,7 @@ public func configure(_ app: Application) throws {
     app.migrations.add(CreateAuthor())
     app.migrations.add(createQuotee())
     app.migrations.add(createQuotee())
+    app.migrations.add(createQuoteeee2())
     
     // wait means : wait until line 19 run or loading
     try app.autoMigrate().wait()
