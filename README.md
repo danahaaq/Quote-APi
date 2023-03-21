@@ -1,4 +1,5 @@
-# Quote-API
+# Project Name
+###  Quote-API
 
 # Our Challinge
 ### Learn backend development by creating  a RESTful API using vapor and Fluent integrated with PSQL database.
@@ -12,16 +13,16 @@
 
 # Include Credits
 
-### https://www.youtube.com/watch?v=CD283bLteP0
+### CodeWithChris: https://www.youtube.com/watch?v=CD283bLteP0
 
-### https://medium.com/globant/crud-operations-using-vapor-postgres-304c63de9f0f
+### Medium: https://medium.com/globant/crud-operations-using-vapor-postgres-304c63de9f0f
 
 
 
 # Team Members 
-### https://github.com/danahaaq
-### https://github.com/inouftamimi
-### https://github.com/ModiMh09
+### ALdanah Alqabbani: https://github.com/danahaaq
+### Nouf Altamimi: https://github.com/inouftamimi
+### Modi Mohammed: https://github.com/ModiMh09
 
 
 
