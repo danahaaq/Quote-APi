@@ -27,7 +27,7 @@ http://127.0.0.1:8080/Quotee | Get | Get all existing Quotes
 
 # Team Members 
 ### ALdanah Alqabbani: https://github.com/danahaaq
-### Nouf Altamimi:  https://github.com/inouftamimi
+### Nouf Altamimi: https://github.com/inouftamimi
 ### Modi Mohammed: https://github.com/ModiMh09
 
 
