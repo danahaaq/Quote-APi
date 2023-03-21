@@ -12,6 +12,9 @@ final class Author: Model, Content {
 
     @Field(key: "Author_Name")
     var Author_Name: String
+    
+    @Children(for: \.$author_id)
+    var qouts: [Quotee]
 
     init() { }
 

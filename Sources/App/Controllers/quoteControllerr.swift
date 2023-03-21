@@ -12,13 +12,13 @@ struct quoteControllerr: RouteCollection {
     func boot(routes: Vapor.RoutesBuilder) throws {
         //quote route
         let quote = routes .grouped("Quotee")
-        quote.get (use: index)
+        quote.get (use: get)
         
         quote.delete(":id", use: delete)
         quote.put(use: update)
     }
     
-    func index(req: Request) throws -> EventLoopFuture<[Quotee]> {
+    func get(req: Request) throws -> EventLoopFuture<[Quotee]> {
         return Quotee.query(on: req.db).all()
     }
     // function update
@@ -37,12 +37,10 @@ struct quoteControllerr: RouteCollection {
     
     // fuction delete
     func delete(req: Request) async throws -> HTTPStatus {
-        
         guard let quote = try await Quotee.find(req.parameters.get("id"), on: req.db) else {
             throw Abort(.notFound)
         }
         try await quote.delete(on: req.db)
         return .ok
     }
-    
 }

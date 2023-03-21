@@ -23,16 +23,16 @@ final class Quotee: Model, Content {
     @Field(key: "Source")
     var Source: String
     
-    @Field(key: "author_id")
-    var author_id: UUID?
+    @Parent(key: "author_id")
+    var author_id: Author
     
     
     init() { }
 
-    init(id: UUID? = nil, Quotes: String,Source: String, author_id: UUID? = nil) {
+    init(id: UUID? = nil, Quotes: String,Source: String, author_id: Author) {
         self.id = id
         self.Quotes = Quotes
         self.Source = Source
-        self.author_id = author_id
+        self.$author_id.id = author_id.id!
     }
 }

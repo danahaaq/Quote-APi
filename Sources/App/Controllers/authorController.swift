@@ -6,16 +6,26 @@ struct authorController: RouteCollection {
     func boot(routes: Vapor.RoutesBuilder) throws {
         let quote = routes .grouped ("author")
 //         call get function
-        quote.get (use: index)
+//        quote.get (use: get1)
+        quote.get (use: get2)
 //         call update function
         quote.put(use: update)
 //         call delete function
         quote.delete(":id", use: delete)
         
     }
-    // function create(get)
-    func index(req: Request) throws -> EventLoopFuture<[Author]> {
-        return Author.query(on: req.db).all()
+    
+    // function basic get
+//    func get1(req: Request) throws -> EventLoopFuture<[Author]> {
+//        return Author.query(on: req.db)
+//            .all()
+//    }
+    
+    // function get parient with all his child
+    func get2(req: Request) throws -> EventLoopFuture<[Author]> {
+        return Author.query(on: req.db)
+            .with(\.$qouts)
+            .all()
     }
     // update function
     func update(req: Request) async throws -> HTTPStatus {
