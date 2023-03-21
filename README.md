@@ -1,8 +1,10 @@
-# Project's Title
+# Quote-API
 
 # Our Challinge
+Learn backend development by creating  a RESTful API using vapor and Fluent integrated with PSQL database.
 
 # Project Description
+Create a quote database that includes the quote's author, source, and text.
 
 # ER Diagram 
 
@@ -10,4 +12,16 @@
 
 # Include Credits
 
+https://www.youtube.com/watch?v=CD283bLteP0
+
+https://medium.com/globant/crud-operations-using-vapor-postgres-304c63de9f0f
+
+
+
 # Team Members 
+https://github.com/danahaaq
+https://github.com/inouftamimi
+https://github.com/ModiMh09
+
+
+
